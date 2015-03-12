@@ -54,5 +54,11 @@ public class ExplicitlyLoadedActivity extends Activity {
 		
 		// TODO - Finish the Activity
 
+        EditText userText = mEditText;
+        Intent activity = new Intent();
+        activity.putExtra("mEditText", userText.getText().toString());
+        setResult(RESULT_OK, activity);
+        finish();
+
 	}
 }
